@@ -12,11 +12,7 @@ class IotController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return Iot::all();
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -26,13 +22,17 @@ class IotController extends Controller
     {
         //
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function index()
+    {
+        return Iot::all();
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -43,7 +43,7 @@ class IotController extends Controller
 
         Iot::create($request->all());
         return redirect()->route('iots.index')
-            ->with('success','Product created successfully.');
+            ->with('success','created successfully.');
     }
 
     /**

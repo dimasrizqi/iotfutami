@@ -66,11 +66,11 @@ sensorTank2s = sensorTank2()
 
 try:
 #    print "Writing to the database..."
-    requests.post("http://103.30.244.22:8000/api/iots",data={'sensor':id_sensors,'channel':'1','value':sensorCIPs})
-    requests.post("http://103.30.244.22:8000/api/iots",data={'sensor':id_sensors,'channel':'2','value':sensorProductions})
-    requests.post("http://103.30.244.22:8000/api/iots",data={'sensor':id_sensors,'channel':'3','value':sensorSterilizations})
-    requests.post("http://103.30.244.22:8000/api/iots",data={'sensor':id_sensors,'channel':'4','value':sensorTank1s})
-    requests.post("http://103.30.244.22:8000/api/iots",data={'sensor':id_sensors,'channel':'5','value':sensorTank2s})
+    requests.post("http://apps.futami.local:8000/api/iots",data={'sensor':id_sensors,'channel':'1','value':sensorCIPs})
+    requests.post("http://apps.futami.local:8000/api/iots",data={'sensor':id_sensors,'channel':'2','value':sensorProductions})
+    requests.post("http://apps.futami.local:8000/api/iots",data={'sensor':id_sensors,'channel':'3','value':sensorSterilizations})
+    requests.post("http://apps.futami.local:8000/api/iots",data={'sensor':id_sensors,'channel':'4','value':sensorTank1s})
+    requests.post("http://apps.futami.local:8000/api/iots",data={'sensor':id_sensors,'channel':'5','value':sensorTank2s})
    
 
 except:
